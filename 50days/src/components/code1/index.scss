@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    .item {
+        height: 100%;
+        flex: 1;
+        transition: 0.5s;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: flex 0.7s ease-in;
+        margin: 10px;
+    }
+    .item.active {
+        flex: 10;
+    }
+}
