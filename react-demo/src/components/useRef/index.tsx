@@ -1,30 +1,21 @@
 import React, { forwardRef, useImperativeHandle } from 'react';
 
 const Child = forwardRef<any>((props, ref) => {
-  useImperativeHandle(ref, () => ({
-    increment: () => {
-      count++;
-      console.log(count);
-    },
-  }));
+  const {continer} = props
+  
+  console.log(continer)
 
-  let count = 0;
-  const increment = () => {
-    count++;
-    console.log(count);
-  };
-
-  return <button ref={ref} onClick={increment}>Click me</button>;
+  return <button >Click me</button>;
 });
 
 export default function Parent() {
   const ref = React.useRef<any>(null);
   return (
-    <>
-      <Child ref={ref} />
-      <button onClick={() => ref.current?.increment()}>
+    <div ref={ref}>
+      <Child continer={ref.current} />
+      {/* <button onClick={() => ref.current?.increment()}>
         Call child's method
-      </button>
-    </>
+      </button> */}
+    </div>
   );
 }

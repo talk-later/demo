@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky to Viewport</title>
+  <style>
+    #parent {
+      height: 2000px; /* 设置父元素的高度，以便产生滚动条 */
+      overflow: auto; /* 添加滚动条以启用滚动 */
+    }
+
+    #stickyElement {
+      position: sticky;
+      top: 10px; /* 设置相对于视口的距离 */
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="parent">
+  <!-- 其他内容 -->
+  <div style="height: 1000px;">其他内容</div>
+  <!-- Sticky 元素 -->
+  <div id="stickyElement">我是一个sticky元素</div>
+</div>
+
+</body>
+</html>
