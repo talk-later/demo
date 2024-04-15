@@ -4,16 +4,16 @@
  * @returns {number}
  */
 const climbStairs = (n) => {
-    let a = 1
-    let b = 1
-    let c = 1
-    for (let i = 2; i <= n; i++) {
-        c = a + b
-        a = b
-        b = c
+    let prevDouble = 0
+    let prev = 1
+    let total = 1
+    for (let i = 1; i <= n; i++) {
+        total = prev + prevDouble
+        prevDouble = prev
+        prev = total
     }
-    return c
+    return total
 };
 
-const n = 45
+const n = 5
 console.log(climbStairs(n))
