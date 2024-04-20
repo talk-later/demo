@@ -1,7 +1,7 @@
-import React, { forwardRef, useImperativeHandle } from 'react';
+import React, { forwardRef } from 'react';
 
-const Child = forwardRef<any>((props, ref) => {
-  const {continer} = props
+const Child = forwardRef((props:any, ref: any) => {
+  const { continer } = props
   
   console.log(continer)
 

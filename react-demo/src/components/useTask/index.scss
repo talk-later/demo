@@ -1,0 +1,18 @@
+@keyframes breathe {
+    50% { width: 188px; height: 188px; box-shadow: inset 0 0 10px #87E8DE,0 0 10px   #87E8DE; border:0}
+    100% { width: 288px; height: 288px; border: 0 solid #5191FF; opacity: 0.5; }
+  }
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #87E8DE;
+    animation: breathe 2s linear infinite;
+  }
+  .circle:nth-child(1) {
+    animation-delay: 1s;
+  }
