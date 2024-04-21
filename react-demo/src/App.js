@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from './components/useTask/index.tsx'
+import Index from './components/store/index.tsx'
 import './index.scss'
 
 export default function App() {
