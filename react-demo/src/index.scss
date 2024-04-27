@@ -1,7 +1,7 @@
-body {
-    margin: 20px;
-    padding: 0;
-}
+// body {
+//     margin: 20px;
+//     padding: 0;
+// }
 
 .ceshi {
     min-width: 0;
@@ -32,4 +32,23 @@ body {
     border-image: url('./components//border-image//back.png');
     border-image-slice: 15 0 fill;
     border-image-width: 15px 0px;
+}
+
+div {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+}
+
+span {
+    flex-shrink: 0;
+    display: inline-block;
+    max-width: 30px;
+    // 超出打点
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
