@@ -1,7 +1,5 @@
 import React from 'react'
-// import { LocalStorageStore } from './localStorage/index.ts'
-import { SessionStorageStore } from './sessionStorage/index.ts'
-import { getStorage, setStorage, removeStorage } from './service/index.ts'
+import { store } from './service/index.ts'
 
 export default function Index() {
 
@@ -9,10 +7,10 @@ export default function Index() {
 
     const handleClick = (type) => {
         if (type === 'add') {
-            setStorage(SessionStorageStore, 'count', 'add')
-            setCount(getStorage(SessionStorageStore, 'count'))
+            store.setStorage('stroe', 'add')
+            setCount(store.getStorage('stroe'))
         } else {
-            removeStorage(SessionStorageStore, 'count')
+            store.removeStorage('stroe')
             setCount('')
         }
     }

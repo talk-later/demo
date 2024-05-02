@@ -1,16 +1,32 @@
-import { Store } from "../Store";
+import { Store } from '../Store'
+import { SessionStorageStore } from '../sessionStorage/index.ts'
 
-export const getStorage = (store: Store, key) => {
+
+const service = (Store: Store) => {
+
     // 获取本地存储
-    return store.getStorage(key)
-}
+    const getStorage = (key: string) => {
+        return Store.getStorage(key)
+    }
 
-export const setStorage = (store: Store, key, value) => {
     // 设置本地存储
-    return store.setStorage(key, value)
+    const setStorage = (key: string, value: any) => {
+        return Store.setStorage(key, value)
+    }
+
+    // 删除本地存储
+    const removeStorage = (key: string) => {
+        return Store.removeStorage(key)
+    }
+    
+    return {
+        getStorage,
+        setStorage,
+        removeStorage
+    }
 }
 
-export const removeStorage = (store: Store, key) => {
-    // 删除本地存储
-    return store.removeStorage(key)
-}
+const store = service(SessionStorageStore)
+
+export { store }
+
