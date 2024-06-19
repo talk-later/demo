@@ -1,8 +1,8 @@
-const aaa = Promise.resolve(222).then(res => {
-    throw 'ysc'
-})
+// const aaa = Promise.resolve(222).then(res => {
+//     throw 'ysc'
+// })
 
-console.log(aaa)
+// console.log(aaa)
 
 
 // Promise.resolve().then(() => {

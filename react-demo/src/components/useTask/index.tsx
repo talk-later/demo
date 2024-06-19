@@ -4,7 +4,8 @@ import './index.scss'
 const runTask = (task) => {
     const _runTask = (callBack, resolve) => {
         const startTime = Date.now()
-        requestAnimationFrame( async () => {
+        requestAnimationFrame( async (time) => {
+            console.log('requestAnimationFrame',time, Date.now())
             if (Date.now() - startTime < 16.6) {
                 callBack()
                 resolve(222)
@@ -37,7 +38,8 @@ export default function Index() {
         }
     }
 
-    const handleClick = async () => {
+    const handleClick = (arg) => {
+        // console.log('开始了', arg)
         for (let i = 0; i < 1000; i++) {
             runTask(task)
         }
@@ -45,7 +47,7 @@ export default function Index() {
 
     return (
         <>
-            <button onClick={handleClick}>dianji</button>
+            <button onClick={() => { handleClick(222) }}>dianji</button>
             <div>
                 <div className={'circle'}></div>
                 <div className={'circle'}></div>

@@ -15,5 +15,17 @@ const climbStairs = (n) => {
     return total
 };
 
+// 递归爬楼梯
+const climbStairsR = (n) => {
+    const _sum = (n) => {
+        if (n === 1) return 1
+        if (n === 2) return 2
+        return _sum(n - 1) + _sum(n - 2)
+    }
+    return _sum(n)
+};
+
+
+
 const n = 5
-console.log(climbStairs(n))
+console.log(climbStairsR(7))
